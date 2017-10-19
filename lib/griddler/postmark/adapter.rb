@@ -79,7 +79,7 @@ module Griddler
       end
 
       def content(attachment)
-        if content = attachment[:Content]
+        if attachment[:Content] && content = attachment[:Content]
           Base64.decode64(content)
         else
           content
